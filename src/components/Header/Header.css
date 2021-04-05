@@ -1,0 +1,11 @@
+.nav-link{
+    text-decoration: none;
+    margin-right:30px;
+    padding-right: 30px;
+    float:right;
+}
+.logo{
+    text-decoration: none;
+    color:black;
+    font-size:30px;
+}

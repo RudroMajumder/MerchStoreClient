@@ -1,0 +1,16 @@
+.sideNav{
+    border:1px solid black;
+    height:900px;
+    background-color:lightblue;
+}
+.admin-btn{
+    width:300px;
+    background-color:lightblue;
+    border:1px solid black;
+    padding:20px;
+    font-size:20px;
+    margin-top: 10px;
+}
+.buttons{
+    margin: -30px;
+}
