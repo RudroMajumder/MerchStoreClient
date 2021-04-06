@@ -23,7 +23,7 @@ const AddProducts = () => {
         }
         
         console.log(productDetails)
-        const url = `http://localhost:5055/addProduct`;
+        const url = `http://localhost:5000/addProduct`;
         fetch(url, {
             method: 'POST', 
             headers: {
