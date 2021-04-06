@@ -29,11 +29,10 @@ const AddProducts = () => {
             headers: {
               'content-type': 'application/json'
             },
-            body: JSON.stringify(eventData)
+            body: JSON.stringify(productDetails)
           })
           .then(res => console.log('server side response', res))
         };
-    };
 
      const  handleChange =  event =>{
         console.log(event.target.files[0])
@@ -48,7 +47,7 @@ const AddProducts = () => {
           .catch(function (error) {
             console.log(error);
           });
-    }
+        }
     // console.log(image)
 
 
