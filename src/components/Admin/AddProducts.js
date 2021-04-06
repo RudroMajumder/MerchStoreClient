@@ -56,7 +56,7 @@ const AddProducts = () => {
         <div>
             <Sidebar></Sidebar>
             <h1 className="title">Add Product</h1>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} style={{position: "fixed", top: "10%", left: "40%"}}>
                <h4 className="input-title"> Product Name :</h4>
                <input name="name" defaultValue="New exciting Event" onBlur={e=>{setName(e.target.value)}}  />
                 <br/>

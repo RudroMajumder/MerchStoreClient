@@ -1,0 +1,15 @@
+.home{
+    position:fixed;
+    left:40%;
+}
+.or{
+    display:flex;
+    justify-content: center;
+}
+.social-btn{
+    width:300px;
+    margin-top:20px;
+    background-color: lawngreen;
+    border-radius: 10px;
+    padding:10px;
+}

@@ -5,7 +5,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { loginFramework,handleGoogleSignIn,handleFbSignIn,createUserWithEmailAndPassword,signInWithEmailAndPassword  } from './LoginManager';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
-
+import './Login.css';
 
 const Login = () => {
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
@@ -103,7 +103,6 @@ const Login = () => {
           }
         e.preventDefault();
     }
-console.log("user:"+user.name+"loggedInUser:"+loggedInUser.name)
     return (
         <div className="home">
             <div className="form">
@@ -129,11 +128,11 @@ console.log("user:"+user.name+"loggedInUser:"+loggedInUser.name)
                     <button style={{color:"red",border:"none",background: "none"}}> {newUser?'Login':'Create an account '} </button> 
                 </p>
             </div>
-            <p><span className="or"> Or </span></p>
+            <p><span className="or" > Or </span></p>
             <div className="text-center buttons">
-                <button className="btn" onClick={fbSignIn}> <FaFacebook size={28}/> Continue in with Facebook </button>
+                <button className="social-btn" onClick={fbSignIn}> <FaFacebook size={28}/> Continue  with Facebook </button>
                 <br/>
-                <button className="btn" onClick={googleSignIn}> <FaGoogle size={28}/> Continue in with Google </button>
+                <button className="social-btn" onClick={googleSignIn}> <FaGoogle size={28}/> Continue  with Google </button>
             </div>
         </div>
     );

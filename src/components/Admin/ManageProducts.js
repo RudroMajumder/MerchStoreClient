@@ -18,8 +18,8 @@ const ManageProducts = () => {
     },[])
     return (
         <div>
-            <Sidebar></Sidebar>
-            <Table striped bordered hover>
+            {/* <Sidebar></Sidebar> */}
+            <Table striped bordered hover  className="w-75" style={{position: "fixed", top: "10%", left: "20%"}}>
                 <thead>
                     <tr>
                     <th>Product Name</th>

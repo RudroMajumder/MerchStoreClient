@@ -10,10 +10,17 @@ import Admin from './components/Admin/Admin';
 import AddProducts from './components/Admin/AddProducts';
 import ManageProducts from './components/Admin/ManageProducts';
 import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import { createContext } from 'react';
+import { useState } from 'react';
+
+export const UserContext = createContext();
+
 
 function App() {
+  const  [loggedInUser,setLoggedInUser] = useState({});
   return (
-    <div className="App">
+    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
       <Router>
         <Header></Header>
         <Switch>
@@ -32,9 +39,12 @@ function App() {
           <Route path="/addProducts">
             <AddProducts></AddProducts>
           </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
         </Switch>
       </Router>
-    </div>
+    </UserContext.Provider>
   );
 }
 
