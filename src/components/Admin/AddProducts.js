@@ -32,6 +32,7 @@ const AddProducts = () => {
             body: JSON.stringify(productDetails)
           })
           .then(res => console.log('server side response', res))
+          alert("Product added successfully");
         };
 
      const  handleChange =  event =>{
