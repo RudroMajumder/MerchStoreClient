@@ -13,7 +13,7 @@ const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/product/'+_id)
+        fetch('https://whispering-wildwood-87552.herokuapp.com/product/'+_id)
         .then( res => res.json())
         .then( data => setCart(data[0]))
         },[])
@@ -25,7 +25,7 @@ const Checkout = () => {
         const orderDetails = { ...loggedInUser, ...cart, date: new Date()};
         console.log(orderDetails);
 
-            fetch('http://localhost:5000/addOrder',{
+            fetch('https://whispering-wildwood-87552.herokuapp.com/addOrder',{
                 method:"POST",
                 headers:{'Content-Type': 'application/json'},
                 body:JSON.stringify(orderDetails)

@@ -12,14 +12,14 @@ const ManageProducts = () => {
     const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
     const[products,setProducts] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://whispering-wildwood-87552.herokuapp.com/products')
         .then( res => res.json())
         .then( data => setProducts(data))
     },[])
 
     const deleteProduct = (id)  =>{
         console.log(id);
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://whispering-wildwood-87552.herokuapp.com/delete/${id}`,{
             method:"DELETE",
             headers:{"Content-Type":"application.json"},
             body:JSON.stringify()

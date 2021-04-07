@@ -9,7 +9,7 @@ const Home = () => {
     const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
     const[products,setProducts] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://whispering-wildwood-87552.herokuapp.com/products')
         .then( res => res.json())
         .then( data => setProducts(data))
     },[])

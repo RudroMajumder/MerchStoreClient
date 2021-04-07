@@ -23,7 +23,7 @@ const AddProducts = () => {
         }
         
         console.log(productDetails)
-        const url = `http://localhost:5000/addProduct`;
+        const url = `https://whispering-wildwood-87552.herokuapp.com/addProduct`;
         fetch(url, {
             method: 'POST', 
             headers: {
