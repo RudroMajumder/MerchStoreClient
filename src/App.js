@@ -15,6 +15,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './components/Login/PrivateRoute';
 import Checkout from './components/Checkout/Checkout';
+import Order from './components/Order/Order';
 
 export const UserContext = createContext();
 
@@ -44,9 +45,12 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/checkout/:_id">
-            <Checkout></Checkout>
+          <Route path="/orders">
+            <Order></Order>
           </Route>
+          <PrivateRoute path="/checkout/:_id">
+            <Checkout></Checkout>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>
