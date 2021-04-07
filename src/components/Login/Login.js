@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { FaFacebook } from 'react-icons/fa';
 import { FaGoogle } from 'react-icons/fa';
-import { loginFramework,handleGoogleSignIn,handleFbSignIn,createUserWithEmailAndPassword,signInWithEmailAndPassword  } from './LoginManager';
+import { loginFramework,handleGoogleSignIn,handleFbSignIn,createUserWithEmailAndPassword,signInWithEmailAndPassword, storeAuthToken  } from './LoginManager';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Login.css';
