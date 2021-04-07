@@ -1,19 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { FaCartPlus } from "react-icons/fa";
+import { useContext } from 'react';
+import { UserContext } from '../../App';
+import { useHistory } from 'react-router-dom';
+import Checkout from '../Checkout/Checkout';
+
 const Product = (props) => {
     const {name,img_url,price,_id} = props.product;
     const [cart,setCart] = useState({});
-    const addToCart = () =>{
-        const productId = name;
-        console.log(productId);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
-        fetch('http://localhost:5000/productById',{
+    const addToCart =()=>{
+        const addedProduct = {
+            productName: name,
+            productPrice: price,
+            id: _id,
+            quantity:1
+        };
+        const orderDetails = { ...loggedInUser,...addedProduct};
+        setCart(addedProduct);
+
+        fetch('http://localhost:5000/addOrder',{
             method:"POST",
             headers:{'Content-Type': 'application/json'},
-            body:JSON.stringify(productId)
+            body:JSON.stringify(orderDetails)
         })
+        .then( res => res.json())
+        .then( data => console.log(data))
     }
+    Object.keys(cart).length && console.log(cart)
+    const history = useHistory()
+
+    const handleAddOrder = (id) =>{
+        history.push(`/checkout/${id}`);
+    }
+    
 
 
     return (
@@ -27,7 +49,7 @@ const Product = (props) => {
                 </div>
                 <div className="card-footer d-flex justify-content-between">
                     <h4>${price}</h4>
-                    <button className="btn" onClick={addToCart}> <FaCartPlus/>  Add to cart </button>
+                    <button className="btn" onClick={()=>handleAddOrder(_id)}> <FaCartPlus/>  Add to cart </button>
                 </div>
             </div>
         </div>

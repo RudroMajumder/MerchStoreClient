@@ -13,6 +13,8 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
+import PrivateRoute from './components/Login/PrivateRoute';
+import Checkout from './components/Checkout/Checkout';
 
 export const UserContext = createContext();
 
@@ -41,6 +43,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/checkout/:_id">
+            <Checkout></Checkout>
           </Route>
         </Switch>
       </Router>
