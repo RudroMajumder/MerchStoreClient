@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
 import './Order.css';
-import { Table } from 'react-bootstrap';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 
 const Order = () => {
@@ -21,31 +21,33 @@ const Order = () => {
     console.log(orders)
     return (
         <div className="container">
-            <h1 className="title">you have {orders.length} orders</h1><br/>
-            <Table striped bordered className="mt-5">
+            <p className="order-title"><big>you have {orders.length} orders</big></p><br/>
+            <div className="table-responsive">
+            <table className="table table table-striped  mt-5 ">
                 <thead>
                     <tr>
-                    <th>Email</th>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Date</th>
+                    <th >Email</th>
+                    <th >Product Name</th>
+                    <th >Quantity</th>
+                    <th >Price</th>
+                    <th >Date</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         orders.map(order=>
                             <tr>
-                                <td>{order.email}</td>
-                                <td>{order.name}</td>
-                                <td>1</td>
-                                <td>{order.price}</td>
-                                <td>{(new Date(order.date).toDateString('dd/MM/yyyy'))}</td>
+                                <td >{order.email}</td>
+                                <td >{order.name}</td>
+                                <td >1</td>
+                                <td >{order.price}</td>
+                                <td >{(new Date(order.date).toDateString('dd/MM/yyyy'))}</td>
                             </tr>    
                                 )
                     }
                 </tbody>
-            </Table>
+            </table>
+            </div>
         </div>
     );
 };

@@ -4,5 +4,10 @@
     font-size: 20px;
     padding: 10px;
     border-radius: 10px;
-
 }
+ @media screen and (max-width:424px){
+    .addOrderBtn{
+        background-color: lawngreen;
+        width:40%;
+    }
+ }

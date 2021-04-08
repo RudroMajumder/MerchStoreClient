@@ -1,0 +1,19 @@
+.order-title{
+    position: absolute;
+    left:260px;
+    margin-bottom: 30px;
+}
+@media screen and (max-width:650px){
+    .order-title{
+    position: absolute;
+    left:200px;
+    margin-bottom: 30px;
+    }
+}
+@media screen and (max-width:500px){
+    .order-title{
+    position: absolute;
+    left:5%;
+    margin-bottom: 30px;
+    }
+}

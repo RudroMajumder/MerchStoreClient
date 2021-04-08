@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { table } from 'react-bootstrap';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useParams } from 'react-router-dom';
@@ -37,7 +37,8 @@ const Checkout = () => {
     return (
         <div className="container">
             <h1> This is checkout </h1>
-            <Table striped bordered >
+            <div className="table-responsive">
+            <table className="table table-striped" >
                 <thead>
                     <tr>
                     <th>Product Name</th>
@@ -55,7 +56,8 @@ const Checkout = () => {
                     <td colSpan="3"><button className="addOrderBtn" onClick={addToCart}> Place Order </button></td>
                     </tr>
                 </tbody>
-            </Table>
+            </table>
+            </div>
         </div>
     );
 }

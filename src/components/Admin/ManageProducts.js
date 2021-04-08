@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import { useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { table } from 'react-bootstrap';
 import { useEffect } from 'react';
 import { MdDelete,MdCreate } from "react-icons/md";
 import ClockLoader from "react-spinners/ClipLoader";
@@ -34,7 +34,8 @@ const ManageProducts = () => {
         <div>
             <Sidebar> </Sidebar>
             <h1 className="title"> Manage Products </h1>
-            <Table striped bordered hover  className="w-75 mt-5" style={{position: "fixed", top: "10%", left: "20%"}}>
+            <div className="table-responsive">
+                <table  className=" table table-striped w-75 mt-5" style={{position: "fixed", top: "10%", left: "20%"}}>
                 <thead>
                     <tr>
                     <th>Product Name</th>
@@ -56,7 +57,8 @@ const ManageProducts = () => {
                         )
                     }
                 </tbody>
-            </Table>
+            </table>
+            </div>
         </div>
     );
 };
