@@ -108,17 +108,17 @@ const Login = () => {
             <div className="form">
                 <h2 > {newUser?'Create an account':'Log in'} </h2>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name="name" onBlur={handleBlur} placeholder="Name" />
+                    <input type="text" name="name" onBlur={handleBlur} placeholder="Name" className="input-field"/>
                     <br/>
-                    <input type="email" name="email" onBlur={handleBlur} placeholder="Email Address" required/>
+                    <input type="email" name="email" onBlur={handleBlur} placeholder="Email Address" className="input-field" required/>
                     <br/>
                         <input
                             name="password" onBlur={handleBlur} placeholder="Password"
-                            type="password" required/>
+                            type="password" required className="input-field"/>
                     <br/>
                     {newUser && <input
                             name="confirmPassword" onBlur={handleBlur} placeholder="Confirm Password"
-                            type="password" required/>}
+                            type="password" required className="input-field"/>}
                     <br/>
                     <p style={{color:"red"}}> {error} </p>
                     <input type="submit" value={newUser?'Create an account ':'Login'} className="submit-btn"/>
