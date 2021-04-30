@@ -1,13 +1,19 @@
-# Getting Started with Merch Store
+#Merch Store
 
-This project was created with [Mern Stack](https://merch-store-4ec9c.web.app/).
+To visit the site[click here](https://merch-store-4ec9c.web.app/).
 
-[Client side repo](https://github.com/Porgramming-Hero-web-course/full-stack-client-RudroMajumder)
-[Server side repo](https://github.com/Porgramming-Hero-web-course/full-stack-server-RudroMajumder)
+[Server side repo](https://github.com/RudroMajumder/MerchStoreServer)
 
-Merch store is a online t-shirt selling store.The client side of the whole project has been developed with react,the database is created using mongodb and as the backend node.js and express.js have been used.So basically this is a fullstack project.
+Merch Store is a single page application built with React.js,Node.js,Express.js and Mongodb.This application is for an online 
+t-shirt selling store.
 
-A user can see all the available t-shirts in the store ,then to bu a t-shirt the user must be logged in which has been authenticated by using firebase.
 
-An admit can manipulate the application by adding new products or deleting  a product from the store.
+Features:
+
+  1)Firebase Authentication.
+  2)React Router.
+  3)Clients can put an order for any of the product.
+  4)Clients can see their previous orders.
+  5)Admins can add products and manage all products.
+
 
